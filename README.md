@@ -1,15 +1,17 @@
 # ClassroomOccupancyTracker_UPC-STIC
 
-# Documentation of the Classroom Occupancy Management Script
+## Documentation of the Classroom Occupancy Management Script
 
-This script is designed for **EPSEVG ServeisTIC** and its goal is to manage and visualize the occupancy of classrooms in an Excel sheet, marking the time slots according to the occupancy status.
+This script is designed for **EPSEVG ServeisTIC** to manage and visualize classroom occupancy within a Google Sheets document. It marks time slots based on occupancy status, helping track the usage of classrooms across two weeks.
 
-## Author
+### Author
 
 - **Name:** Adrián Borrego
 - **Date:** 09/23/2024
 
-## Description
+---
+
+### Description
 
 The script follows these steps:
 
@@ -21,16 +23,16 @@ The script follows these steps:
    - **Purple:** Classroom is free only in the second week (S2).
    - **White:** Classroom is occupied in both weeks.
 
-## Global Variables (INPUTS)
+### Global Variables (INPUTS)
 
 - `llistaAules`: List of classrooms to be processed.
 - `nomFullaFranjas`: Name of the sheet where the occupancy will be drawn.
 - `filaDeInici`: Starting row for coloring.
 - `columnaDeInici`: Starting column for coloring.
 
-## Functions
+### Functions
 
-### `processarOcupacioAules()`
+#### `processarOcupacioAules()`
 
 Main function that handles the entire process: data retrieval (scrapping), occupancy comparison, and coloring of results in the Excel sheet.
 
@@ -39,35 +41,35 @@ Main function that handles the entire process: data retrieval (scrapping), occup
 - Compares data between weeks and marks time slots.
 - Deletes temporary sheets generated during the process.
 
-### `extreureICrearFulla(url)`
+#### `extreureICrearFulla(url)`
 
 Extracts the occupancy data from a URL and creates a new Excel sheet with the extracted information.
 
 - Detects if the data belongs to S1 or S2.
 - Creates a new sheet with the corresponding name if it doesn’t exist.
 
-### `compararFulles(nomFulla1, nomFulla2)`
+#### `compararFulles(nomFulla1, nomFulla2)`
 
 Compares two occupancy sheets (S1 and S2) and generates a new sheet with the comparison results.
 
 - Colors the results with the corresponding colors: green, yellow, purple, white.
 
-### `marcarFranjasHoraries(nomFullaComparacio, fila, columna)`
+#### `marcarFranjasHoraries(nomFullaComparacio, fila, columna)`
 
 Marks the time slots on the comparison sheet, assigning colors based on the occupancy status.
 
 - Defines the specific time slots.
 - Applies background colors based on the comparison results.
 
-### `eliminarFullaPerNom(nomFulla)`
+#### `eliminarFullaPerNom(nomFulla)`
 
 Deletes a sheet from the Excel document identified by its name.
 
-### `getColumnLetter(baseCol, index)`
+#### `getColumnLetter(baseCol, index)`
 
 Returns the letter of the column corresponding to the given index, starting from a base column.
 
-## Time Slot Sequence
+### Time Slot Sequence
 
 - 08:30 - 10:30
 - 10:30 - 12:30
@@ -76,7 +78,7 @@ Returns the letter of the column corresponding to the given index, starting from
 - 17:00 - 19:00
 - 19:00 - 21:00
 
-## Usage Example
+### Usage Example
 
 ```javascript
 const llistaAules = ['VGA105', 'VGA108', 'VGA109'];
@@ -86,3 +88,4 @@ var columnaDeInici = 'C';
 
 // Execute the occupancy process
 processarOcupacioAules();
+
