@@ -41,11 +41,11 @@ function updateWeekStatus() {
 
 function getTodayColumnIndex() {
     const columnMapping = {
-        1: 0,  // Dilluns
-        2: 6,  // Dimarts
-        3: 12, // Dimecres
-        4: 18, // Dijous
-        5: 24  // Divendres
+        1: 0,  // Monday
+        2: 6,  // Tuesday
+        3: 12, // Wednesday
+        4: 18, // Thursday
+        5: 24  // Friday
     };
     const dayOfWeek = new Date().getDay();
     return columnMapping[dayOfWeek] !== undefined ? columnMapping[dayOfWeek] : -1;

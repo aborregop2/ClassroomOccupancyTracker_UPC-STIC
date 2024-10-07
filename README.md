@@ -32,7 +32,7 @@ Additionally, with the script we have the ability to **scrape data from public G
 
 ### Web Scraping and Public Google Drive Integration
 
-One use for the main script is that we can use the script to integrate **Google Drive** by creating a **public Google Sheets document** with any front-end. By setting the file to public and sharing the web link, we are able to scrape the occupancy data directly from this excel web. This data can then be processed and visualized, providing real-time updates for classroom occupancy.
+One use for the main script is that we can use the script to integrate **Google Drive** by creating a **public Google Sheets document** with any front-end that has a table and needs to be painted with classroom occupancy. By setting the file to public and sharing the web link, we are able to scrape the occupancy data directly from this excel web. This data can then be processed and visualized, providing real-time updates for classroom occupancy.
 
 The ability to scrape a public Google Sheet and render tables is especially useful for frontends that require dynamic visualizations. This feature allows the occupancy data to be consistently up-to-date and easily shareable via web interfaces.
 
