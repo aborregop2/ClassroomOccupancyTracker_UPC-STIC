@@ -1,0 +1,161 @@
+/* Fuente Fira Sans */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+
+@keyframes rotateTitle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: white; 
+    color: rgb(0, 123, 177); 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    position: relative;
+}
+
+
+.logo, .logo2 {
+    width: 25%;
+    transition: transform 0.5s ease-in-out;
+    animation: rotateTitle 4s ease-in-out infinite;
+}
+
+.logo {
+    max-width: 400px;
+    margin-left: 25px;
+    position: absolute;
+    left: 10px;
+}
+
+.logo2 {
+    max-width: 130px;
+    margin-right: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+
+h1 {
+    color: rgb(0, 123, 177);
+    font-size: 50px;
+    transform-origin: center;
+    margin: 0;
+}
+
+
+h2 {
+    text-align: center;
+    color: rgb(0, 123, 177);
+    font-size: 60px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 2px; 
+}
+
+span.semana {
+    margin-right: 5px;
+}
+
+table {
+    width: 80%;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead th {
+    background-color: rgb(0, 123, 177);
+    color: white;
+    padding: 20px;
+    border: 2px solid rgb(0, 123, 177);
+    font-size: 35px;
+}
+
+tbody td, .time-column {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid rgb(0, 123, 177);
+    font-size: 28px;
+}
+
+.time-column {
+    background-color: rgb(0, 123, 177);
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+tbody tr {
+    height: 60px;
+}
+
+
+/* Estats */
+.ocupat {
+    background-color: #c47979;
+}
+
+.lliure {
+    background-color: #93c47d;
+}
+
+
+/* Llegenda */
+.llegenda {
+    margin: 5px auto;
+    font-size: 16px;
+    color: rgb(0, 123, 177);
+    font-weight: bold;
+    font-size: 20px;
+    width: 80%;
+}
+
+.llegenda h3 {
+    margin-bottom: 10px;
+}
+
+.llegenda ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.llegenda li {
+    margin-right: 30px; 
+    display: flex;
+    align-items: center; 
+}
+
+.llegenda span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(0, 123, 177);
+}
+
+

@@ -4,31 +4,11 @@ const llistaAules = [                  // Llista d'aules
     'VGA109',
     'VGA111',
     'VGA114',
-    'VGB111',
-    'VGA207',
-    'VGA208',
-    'VGA209',
-    'VGA210',
-    'VGA211',
-    'VGA212',
-    'VGA213',
-    'VGA214',
-    'VGB001',
-    'VGB003',
-    'VGB005',
-    'VGB007',
-    'VGB008',
-    'VGB101',
-    'VGB104',
-    'VGB107',
-    'VGB108',
-    'VGB109',
-    'VGB110'
 ];
 
 const nomFullaFranjas = 'horari tic'; // Nom de la fulla a pintar 
-var filaDeInici = 5;                  // Fila inicial per la que comença a pintar
-var columnaDeInici = 'C';             // Columna inicial per la que comença a pintar
+var filaDeInici = 1;                  // Fila inicial per la que comença a pintar
+var columnaDeInici = 'A';             // Columna inicial per la que comença a pintar
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -168,19 +148,9 @@ function compararFulles(nomFulla1, nomFulla2) {
       if (!valor1 && !valor2) {
         colorsFila.push('#93c47d');  // Verd
       } else if (!valor1 && valor2) {
-        if (nomFulla1.includes("s1")) {
-          colorsFila.push('#ffd966');  // Groc
-        }
-        else {
-          colorsFila.push('#c27ba0');  // Morat
-        }
+        colorsFila.push(nomFulla1.includes("s1") ? '#ffd966' : '#c27ba0');  // Groc o Morat
       } else if (valor1 && !valor2) {
-        if (nomFulla1.includes("s1")) {
-          colorsFila.push('#c27ba0');
-        }
-        else {
-          colorsFila.push('#ffd966');  
-        }
+        colorsFila.push(nomFulla1.includes("s1") ? '#c27ba0' : '#ffd966');  // Morat o Groc
       } else {
         colorsFila.push('#FFFFFF');  // Blanc
       }
