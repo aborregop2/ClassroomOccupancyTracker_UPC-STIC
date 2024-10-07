@@ -23,7 +23,7 @@ The script follows these steps:
    - **Purple:** Classroom is free only in the second week (S2).
    - **White:** Classroom is occupied in both weeks.
 
-![Diagrama 1](diagram1.png)
+![Diagrama 1](diagrama1.png)
 
 Additionally, with the script we have the ability to **scrape data from public Google Sheets**, allowing for automatic updates and table rendering in web frontends that can visualize this information dynamically.
 
