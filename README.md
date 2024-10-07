@@ -23,8 +23,8 @@ The script follows these steps:
    - **Purple:** Classroom is free only in the second week (S2).
    - **White:** Classroom is occupied in both weeks.
 
-![Diagrama 1 Script](diagrama1.png)
-![Diagrama 2 Script](diagrama2.png)
+![Diagrama 1 Script](readme_images/diagrama1.png)
+![Diagrama 2 Script](readme_images/diagrama2.png)
 
 Additionally, with the script we have the ability to **scrape data from public Google Sheets**, allowing for automatic updates and table rendering in web frontends that can visualize this information dynamically.
 
@@ -36,7 +36,9 @@ One use for the main script is that we can use the script to integrate **Google 
 
 The ability to scrape a public Google Sheet and render tables is especially useful for frontends that require dynamic visualizations. This feature allows the occupancy data to be consistently up-to-date and easily shareable via web interfaces.
 
-![Diagrama 3 FrontEnd](diagrama3.png)
+Like for example the proposed FrontEnd at web directory:
+
+![Diagrama 3 FrontEnd](readme_images/diagrama3.png)
 
 ---
 
