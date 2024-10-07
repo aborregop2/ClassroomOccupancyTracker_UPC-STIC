@@ -2,7 +2,7 @@
 
 ## Documentation of the Classroom Occupancy Management Script
 
-This script is designed for **EPSEVG ServeisTIC** to manage and visualize classroom occupancy within a Google Sheets document. It marks time slots based on occupancy status, helping track the usage of classrooms across two weeks.
+This script is designed for **EPSEVG ServeisTIC** to manage and visualize classroom occupancy within a Google Sheets document. It marks time slots based on occupancy status at a Google Drive excel, helping track the usage of classrooms across week s1 and s2.
 
 ### Author
 
@@ -23,13 +23,15 @@ The script follows these steps:
    - **Purple:** Classroom is free only in the second week (S2).
    - **White:** Classroom is occupied in both weeks.
 
+![Diagrama 1](diagram1.png)
+
 Additionally, with the script we have the ability to **scrape data from public Google Sheets**, allowing for automatic updates and table rendering in web frontends that can visualize this information dynamically.
 
 ---
 
 ### Web Scraping and Public Google Drive Integration
 
-This script can integrate with **Google Drive** by creating a **public Google Sheets document**. By setting the file to public and sharing the web link, the script is able to scrape the occupancy data directly from the web. This data can then be processed and visualized within the script, providing real-time updates for classroom occupancy.
+One use for the main script is that we can use the script to integrate **Google Drive** by creating a **public Google Sheets document** with any front-end. By setting the file to public and sharing the web link, we are able to scrape the occupancy data directly from this excel web. This data can then be processed and visualized, providing real-time updates for classroom occupancy.
 
 The ability to scrape a public Google Sheet and render tables is especially useful for frontends that require dynamic visualizations. This feature allows the occupancy data to be consistently up-to-date and easily shareable via web interfaces.
 
@@ -98,7 +100,7 @@ Returns the letter of the column corresponding to the given index, starting from
 
 ```javascript
 const llistaAules = ['VGA105', 'VGA108', 'VGA109'];
-const nomFullaFranjas = 'sheet_with_occupancy';
+const nomFullaFranjas = 'sheet_we_want_to_paint';
 var filaDeInici = 5;
 var columnaDeInici = 'C';
 
