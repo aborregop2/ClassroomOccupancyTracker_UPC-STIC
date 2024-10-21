@@ -4,7 +4,7 @@
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRQXByO5kM3joHaiWUJQmkt0oI_gfPp7yZNyGRn9Cg_Khink8NuBtQS9BwtX8LF4Fdt06C2-1HvjRKw/pubhtml?gid=500526275&single=true';
 
-///////asd/////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -87,8 +87,8 @@ async function updateTable() {
             if (!cell) return '#c47979'; // Default en vermell
 
             if ((cell.classList.contains('s1') && getWeekStatus() === 'S1') ||
-                (cell.classList.contains('s3') && getWeekStatus() === 'S2') ||
-                cell.classList.contains('s2')) {
+                (cell.classList.contains('s2') && getWeekStatus() === 'S2') ||
+                (cell.classList.contains('s3'))) {
                 return '#93c47d'; // Verd
             }
             return '#c47979'; // Vermell
