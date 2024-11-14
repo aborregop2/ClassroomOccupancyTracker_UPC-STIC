@@ -73,12 +73,13 @@ Compares two occupancy sheets (S1 and S2) and generates a new sheet with the com
 
 - Colors the results with the corresponding colors: green, yellow, purple, white.
 
-#### `marcarFranjasHoraries(nomFullaComparacio, fila, columna)`
+#### `marcarFranjasHoraries(nomFullaComparacio, fila, columna, putText?)`
 
 Marks the time slots on the comparison sheet, assigning colors based on the occupancy status.
 
 - Defines the specific time slots.
 - Applies background colors based on the comparison results.
+- If putText is True each cell will contain if is free at S1, S2 or both
 
 #### `eliminarFullaPerNom(nomFulla)`
 
@@ -111,5 +112,4 @@ var columnaDeInici = 'C';
 
 // Execute the occupancy process
 processarOcupacioAules();
-
 

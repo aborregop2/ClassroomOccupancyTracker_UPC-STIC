@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////
+//////////aasaa/////////////////////////////////////////
 // Put a sheet URL here to fetch the table from it!
 ///////////////////////////////////////////////////
 
@@ -27,7 +27,7 @@ async function fetchAndParseTable() {
 
 function getWeekStatus() {
     const currentDate = new Date();
-    const startDate = new Date('2024-09-30');
+    const startDate = new Date('2024-10-21');
     const weeksPassed = Math.floor((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
     return weeksPassed % 2 === 0 ? 'S2' : 'S1';
 }
@@ -84,13 +84,15 @@ async function updateTable() {
         const cells = row.querySelectorAll('td');
         return Array.from({ length: 6 }, (_, cellIndex) => {
             const cell = cells[todayColumnIndex + cellIndex];
-            if (!cell) return '#c47979'; // Default en vermell
+            const cellContent = cell.innerHTML.toLowerCase();
 
-            if ((cell.classList.contains('s1') && getWeekStatus() === 'S1') ||
-                (cell.classList.contains('s2') && getWeekStatus() === 'S2') ||
-                (cell.classList.contains('s3'))) {
+            if ((cellContent.includes('s1') && getWeekStatus() === 'S1') ||
+                (cellContent.includes('s2') && getWeekStatus() === 'S2') ||
+                (cellContent.includes('ambdues'))) 
+            {
                 return '#93c47d'; // Verd
             }
+
             return '#c47979'; // Vermell
         });
     });
